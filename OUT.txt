@@ -1,0 +1,31 @@
+Tabel link
+---------------------------------------------
+ALTER TABLE  pb_contact
+ADD FOREIGN KEY (u_id)
+REFERENCES pb_user(u_id)
+
+
+VALUES Add
+--------------------------------------------------
+INSERT INTO `pb_user` (`u_id`, `u_name`, `u_email`, `u_password`) VALUES (NULL, 'arafat', 'arafat@gmail.com', '1111');
+
+
+VALUES Add
+--------------------------------------------------
+INSERT INTO `pb_contact` (`c_id`, `c_name`, `c_phone`, `u_id`) VALUES (NULL, 'abo', '017344554', '1'); 
+
+
+
+
+
+<?php
+
+echo '<pre>';
+print_r($_POST);
+
+
+
+echo "Failed.".mysqli_error($link);
+
+
+?>
